@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebDev Helper</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="container border shadow p-2 my-2 rounded">
+        <div class="container d-flex navbar" style="justify-content: space-evenly;">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Color Generator Design-->
+    <div class="container border shadow p-2 my-3 rounded">
+        <h2 class="text-center text-primary">Color Generator</h2>
+        <hr>
+        <div class="container p-2 my-2 rounded col-gen">
+            <div class="container border shadow-lg p-2 my-2 rounded" id="col-box">
+            </div>
+            <div class="action my-3">
+                <span class="text-light fw-bolder btn btn-primary" id="color"></span>
+                <button onclick="generateColor()" class="btn btn-outline-light">Generate</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Random Color Generate Script
+        function generateColor() {
+            let color = '#';
+            let digits = '0123456789ABCDEF';
+            for (let i = 0; i < 6; i++) {
+                let randomDigit = Math.floor(Math.random() * 16);
+                color += digits[randomDigit];
+            }
+            document.getElementById('color').innerHTML = color;
+            document.getElementById('col-box').style.backgroundColor = color;
+        }
+        generateColor();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
