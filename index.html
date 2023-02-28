@@ -17,8 +17,8 @@
     <div class="container border shadow p-2 my-2 rounded">
         <div class="container d-flex navbar" style="justify-content: space-evenly;">
             <a href="#">Home</a>
-            <a href="#">Color Generator</a>
-            <a href="#">Quotes Generator>
+            <a href="#color-generator">Color Generator</a>
+            <a href="#quotes-generator">Quotes Generator>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
         </div>
@@ -26,7 +26,7 @@
     <!-- Navbar end -->
 
     <!-- Color Generator Design-->
-    <div class="container border shadow p-2 my-3 rounded">
+    <div class="container border shadow p-2 my-3 rounded" id="color-generator">
         <h2 class="text-center text-primary">Color Generator</h2>
         <hr>
         <div class="container p-2 my-2 rounded col-gen">
@@ -41,12 +41,12 @@
     </div>
 
     <!-- Quotes Generator Design-->
-    <div class="container border shadow p-2 my-3 rounded">
+    <div class="container border shadow p-2 my-3 rounded" id="quotes-generator">
         <h2 class="text-center text-primary">Quotes Generator</h2>
         <hr>
         <div class="container p-2 my-2 rounded q-gen">
 
-            <div class="container border shadow-lg p-4 my-4 rounded" id="q-box">
+            <div class="container shadow-lg p-4 my-4 rounded bg-light" id="q-box">
                 <h2>
                     <i class="fas fa-quote-left"></i>
                     <span class="quote" id="quote"></span>
@@ -60,9 +60,6 @@
             </div>
         </div>
     </div>
-    </div>
-
-
 
     <script>
         // Random Color Generate Script
